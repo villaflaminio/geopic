@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "9d67a4e6-721f-446b-bd58-4beaeb18255a",
+		"name": "geris spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getConvention",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/structures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"structures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/location/cata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"cata"
+					]
+				},
+				"description": "loc\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "places",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/places",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"places"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sections?location=catanzaro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sections"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "catanzaro"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cityname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cityname?lat=41.629232835989114&long=12.73589628894488",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cityname"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "41.629232835989114"
+						},
+						{
+							"key": "long",
+							"value": "12.73589628894488"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "citylocation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/citylocation?lat=38.8188265&long=16.6100482&distance=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"citylocation"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "38.8188265"
+						},
+						{
+							"key": "long",
+							"value": "16.6100482"
+						},
+						{
+							"key": "distance",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "settingsdesctiption",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/settingsdesctiption",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"settingsdesctiption"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "positionstructures",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/positionstructures?lat=38.86854273864924&long=16.60159137011068&distance=9&category=auto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"positionstructures"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "38.86854273864924"
+						},
+						{
+							"key": "long",
+							"value": "16.60159137011068"
+						},
+						{
+							"key": "distance",
+							"value": "9"
+						},
+						{
+							"key": "category",
+							"value": "auto"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "section",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/section?section=Liberi Professionisti&location=catanzaro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"section"
+					],
+					"query": [
+						{
+							"key": "section",
+							"value": "Liberi Professionisti"
+						},
+						{
+							"key": "location",
+							"value": "catanzaro"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

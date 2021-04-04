@@ -1,0 +1,31 @@
+--CONTROLLER
+la chiamata arriva al controller
+
+con @RequestMapping("/category") capisco il tipo di richiesta
+
+controller -> ServiceImpl
+
+--SERVICE
+e' utile fare le interfaccie , specificando solo i metodi
+
+nel Service vengono messi tutti i controlli relativi alle info passate dal controller
+dal controller arriva il contenuto e controllo se i dati necessari sono arrivatyi
+
+service -> Helper
+
+--HELPER
+gli helper servono a contenere la bussines logic ed interaggire con le repo
+**  se un helper ha bisogno di info da una repository che non e' collegata a lui
+	deve fare @Autowired dell' helper che comunica con la repository desiderata
+	esempio..
+	personHelper -> personRepository -> (campi , dati personali & dati aziendali )
+	aziendaHelper -> aziendaRepository
+	ho bisogno dei dati dell'azienda di quella persona , chiamo da personaHelper la aziendaHelper, che dovra'
+		contere il metodo desiderato
+
+
+helper -> Repository
+v
+REPOSITORY
+
+
