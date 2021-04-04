@@ -34,3 +34,4 @@ build/
 .vscode/
 /home/flaminio/Desktop/NERD/Geris/gerisV2/src/main/resources/application.properties
 /home/flaminio/Desktop/NERD/Geris/gerisV2/src/main/resources/applicationDeploy.properties
+/src/main/resources/application.properties
