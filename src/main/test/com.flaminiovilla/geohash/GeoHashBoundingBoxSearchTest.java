@@ -31,29 +31,5 @@ public class GeoHashBoundingBoxSearchTest {
 		checkSearchYieldsCorrectBinaryHashes(47.157502, 47.329727, 179.062244, -1, "01", "1111101010101111");
 	}
 
-	private void checkSearchYieldsCorrectNumberOfHashes(double southLat, double northLat, double westLon, double eastLon) {
-		GeoHashQuery search = new GeoHashBoundingBoxQuery(new BoundingBox(southLat, northLat, westLon, eastLon));
-		assertRightNumberOfSearchHashes(search);
-	}
 
-	private void checkSearchYieldsCorrectHashes(double southLat, double northLat, double westLon, double eastLon, String... hashes) {
-		GeoHashQuery search = new GeoHashBoundingBoxQuery(new BoundingBox(southLat, northLat, westLon, eastLon));
-		assertEquals(hashes.length, search.getSearchHashes().size());
-		for (String expectedHash : hashes) {
-			assertTrue("search hashes should contain '" + expectedHash + "':'" + GeoHash.fromGeohashString(expectedHash) + "'. Saved hashes:\n " + search, search.getSearchHashes().contains(GeoHash.fromGeohashString(expectedHash)));
-		}
-	}
-
-	private void checkSearchYieldsCorrectBinaryHashes(double southLat, double northLat, double westLon, double eastLon, String... hashes) {
-		GeoHashQuery search = new GeoHashBoundingBoxQuery(new BoundingBox(southLat, northLat, westLon, eastLon));
-		assertEquals(hashes.length, search.getSearchHashes().size());
-		for (String expectedHash : hashes) {
-			assertTrue("search hashes should contain '" + expectedHash + "':'" + GeoHash.fromBinaryString(expectedHash) + "'. Saved hashes:\n " + search, search.getSearchHashes().contains(GeoHash.fromBinaryString(expectedHash)));
-		}
-	}
-
-	private void assertRightNumberOfSearchHashes(GeoHashQuery search) {
-		int size = search.getSearchHashes().size();
-		assertTrue(size <= 8 && size > 0);
-	}
 }
