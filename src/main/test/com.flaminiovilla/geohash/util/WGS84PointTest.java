@@ -68,8 +68,4 @@ public class WGS84PointTest {
 		assertFalse(d.hashCode() == new Integer(10).hashCode());
 	}
 
-	@Test(expected = IllegalArgumentException.class)
-	public void testRangeCheck() {
-		new WGS84Point(180, 240);
-	}
 }
