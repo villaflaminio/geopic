@@ -1,5 +1,5 @@
 
-package ch.hsr.geohash;
+package com.flaminiovilla.geohash;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
