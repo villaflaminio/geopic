@@ -28,7 +28,7 @@ public final class GeoHash implements Comparable<GeoHash>, Serializable {
 
 	protected byte significantBits = 0;
 
-	protected GeoHash() {
+	public GeoHash() {
 	}
 
 
@@ -121,7 +121,7 @@ public final class GeoHash implements Comparable<GeoHash>, Serializable {
 		return boundingBox.contains(point);
 	}
 
-	protected final void addOnBitToEnd() {
+	public final void addOnBitToEnd() {
 		significantBits++;
 		bits <<= 1;
 		bits = bits | 0x1;

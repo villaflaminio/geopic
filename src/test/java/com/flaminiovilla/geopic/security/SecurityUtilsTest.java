@@ -1,5 +1,6 @@
-package com.flaminiovilla.security;
+package com.flaminiovilla.geopic.security;
 
+import com.flaminiovilla.geopic.security.SecurityUtils;
 import org.junit.Test;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;

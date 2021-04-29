@@ -1,8 +1,8 @@
-package com.flaminiovilla.security.rest;
+package com.flaminiovilla.geopic.security.rest;
 
+import com.flaminiovilla.geopic.util.AbstractRestControllerTest;
 import org.junit.Test;
 import org.springframework.http.MediaType;
-import org.zerhusen.util.AbstractRestControllerTest;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.not;
@@ -16,7 +16,7 @@ public class AuthenticationRestControllerTest extends AbstractRestControllerTest
    public void successfulAuthenticationWithUser() throws Exception {
       getMockMvc().perform(post("/api/authenticate")
          .contentType(MediaType.APPLICATION_JSON)
-         .content("{\"password\": \"password\", \"username\": \"user\"}"))
+         .content("{\"password\": \"flaminio\", \"email\": \"viflaadmin@gmail.com\"}"))
          .andExpect(status().isOk())
          .andExpect(content().string(containsString("id_token")));
    }
@@ -25,7 +25,7 @@ public class AuthenticationRestControllerTest extends AbstractRestControllerTest
    public void successfulAuthenticationWithAdmin() throws Exception {
       getMockMvc().perform(post("/api/authenticate")
          .contentType(MediaType.APPLICATION_JSON)
-         .content("{\"password\": \"admin\", \"username\": \"admin\"}"))
+              .content("{\"password\": \"flaminio\", \"email\": \"viflaadmin@gmail.com\"}"))
          .andExpect(status().isOk())
          .andExpect(content().string(containsString("id_token")));
    }
@@ -34,7 +34,7 @@ public class AuthenticationRestControllerTest extends AbstractRestControllerTest
    public void unsuccessfulAuthenticationWithDisabled() throws Exception {
       getMockMvc().perform(post("/api/authenticate")
          .contentType(MediaType.APPLICATION_JSON)
-         .content("{\"password\": \"password\", \"username\": \"disabled\"}"))
+         .content("{\"password\": \"password\", \"email\": \"disabled\"}"))
          .andExpect(status().isUnauthorized())
          .andExpect(content().string(not(containsString("id_token"))));
    }
@@ -43,7 +43,7 @@ public class AuthenticationRestControllerTest extends AbstractRestControllerTest
    public void unsuccessfulAuthenticationWithWrongPassword() throws Exception {
       getMockMvc().perform(post("/api/authenticate")
          .contentType(MediaType.APPLICATION_JSON)
-         .content("{\"password\": \"wrong\", \"username\": \"user\"}"))
+         .content("{\"password\": \"wrong\", \"email\": \"user\"}"))
          .andExpect(status().isUnauthorized())
          .andExpect(content().string(not(containsString("id_token"))));
    }
@@ -52,7 +52,7 @@ public class AuthenticationRestControllerTest extends AbstractRestControllerTest
    public void unsuccessfulAuthenticationWithNotExistingUser() throws Exception {
       getMockMvc().perform(post("/api/authenticate")
          .contentType(MediaType.APPLICATION_JSON)
-         .content("{\"password\": \"password\", \"username\": \"not_existing\"}"))
+         .content("{\"password\": \"password\", \"email\": \"not_existing\"}"))
          .andExpect(status().isUnauthorized())
          .andExpect(content().string(not(containsString("id_token"))));
    }

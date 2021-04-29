@@ -1,29 +1,16 @@
-package com.flaminiovilla.rest;
+package com.flaminiovilla.geopic.rest;
 
+import com.flaminiovilla.geopic.util.AbstractRestControllerTest;
 import org.junit.Test;
 import org.springframework.http.MediaType;
-import org.zerhusen.util.AbstractRestControllerTest;
 
+import static com.flaminiovilla.geopic.util.LogInUtils.getTokenForLogin;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.zerhusen.util.LogInUtils.getTokenForLogin;
 
 public class PersonRestControllerTest extends AbstractRestControllerTest {
 
-   @Test
-   public void getPersonForUser() throws Exception {
-      final String token = getTokenForLogin("user", "password", getMockMvc());
-
-      assertSuccessfulPersonRequest(token);
-   }
-
-   @Test
-   public void getPersonForAdmin() throws Exception {
-      final String token = getTokenForLogin("admin", "admin", getMockMvc());
-
-      assertSuccessfulPersonRequest(token);
-   }
 
    @Test
    public void getPersonForAnonymous() throws Exception {
@@ -39,8 +26,8 @@ public class PersonRestControllerTest extends AbstractRestControllerTest {
          .andExpect(status().isOk())
          .andExpect(content().json(
             "{\n" +
-               "  \"name\" : \"John Doe\",\n" +
-               "  \"email\" : \"john.doe@test.org\"\n" +
+               "  \"name\" : \"flaminio\",\n" +
+               "  \"email\" : \"vifla01@gmail.com\"\n" +
                "}"
          ));
    }

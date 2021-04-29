@@ -1,7 +1,8 @@
-package com.flaminiovilla.util;
+package com.flaminiovilla.geopic.util;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.flaminiovilla.geopic.security.model.User;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -17,7 +18,7 @@ public final class LogInUtils {
    public static String getTokenForLogin(String username, String password, MockMvc mockMvc) throws Exception {
       String content = mockMvc.perform(post("/api/authenticate")
          .contentType(MediaType.APPLICATION_JSON)
-         .content("{\"password\": \"" + password + "\", \"username\": \"" + username + "\"}"))
+         .content("{\"email\" : \"" + username + "\", \"password\": \"" + password + "\"}"))
          .andReturn()
          .getResponse()
          .getContentAsString();
@@ -30,7 +31,8 @@ public final class LogInUtils {
 
       @JsonAlias("id_token")
       private String idToken;
-
+      @JsonAlias("user")
+      private User user;
       public void setIdToken(String idToken) {
          this.idToken = idToken;
       }

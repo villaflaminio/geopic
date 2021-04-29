@@ -1,4 +1,4 @@
-package com.flaminiovilla;
+package com.flaminiovilla.geopic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
