@@ -1,5 +1,5 @@
 
-package com.flaminiovilla.geopic.component.geocode.kdtree;
+package com.flaminiovilla.geopic.component.geocode.kdTree;
 
 import java.util.Comparator;
 

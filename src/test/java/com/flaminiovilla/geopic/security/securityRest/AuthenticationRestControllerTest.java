@@ -1,4 +1,4 @@
-package com.flaminiovilla.geopic.security.rest;
+package com.flaminiovilla.geopic.security.securityRest;
 
 import com.flaminiovilla.geopic.util.AbstractRestControllerTest;
 import org.junit.Test;

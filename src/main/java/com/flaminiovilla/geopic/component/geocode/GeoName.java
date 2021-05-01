@@ -1,7 +1,7 @@
 
 package com.flaminiovilla.geopic.component.geocode;
 
-import com.flaminiovilla.geopic.component.geocode.kdtree.KDNodeComparator;
+import com.flaminiovilla.geopic.component.geocode.kdTree.KDNodeComparator;
 import com.flaminiovilla.geopic.model.Place;
 
 import java.util.Comparator;

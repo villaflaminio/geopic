@@ -2,7 +2,7 @@
 
 package com.flaminiovilla.geopic.component.geocode;
 
-import com.flaminiovilla.geopic.component.geocode.kdtree.KDTree;
+import com.flaminiovilla.geopic.component.geocode.kdTree.KDTree;
 import com.flaminiovilla.geopic.model.Place;
 
 import java.util.ArrayList;
