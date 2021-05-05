@@ -21,10 +21,17 @@ public class CorsConfig {
       config.setAllowCredentials(true);
       config.addAllowedOrigin("https://geris.flaminiovilla.it"); // e.g. http://domain1.com
       config.addAllowedHeader("http://flaminiovilla.it");
-      config.addAllowedHeader("http://localhost:64916");
+      config.setAllowCredentials(true);
+      config.addAllowedOrigin("*");
       config.addAllowedHeader("*");
-      config.addAllowedMethod("*");
-      source.registerCorsConfiguration("/*/*/*", config);
+      config.addAllowedMethod("OPTIONS");
+      config.addAllowedMethod("HEAD");
+      config.addAllowedMethod("GET");
+      config.addAllowedMethod("PUT");
+      config.addAllowedMethod("POST");
+      config.addAllowedMethod("DELETE");
+      config.addAllowedMethod("PATCH");
+      source.registerCorsConfiguration("/**", config);
 
       source.registerCorsConfiguration("/api/**", config);
       return new CorsFilter(source);
