@@ -8,10 +8,7 @@ import com.flaminiovilla.geopic.security.rest.dto.UserDTO;
 import com.flaminiovilla.geopic.security.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.Optional;
@@ -40,6 +37,7 @@ public class UserRestController {
     *     "password" : "flaminio"
     * }
     * */
+   @CrossOrigin(origins = "*")
    @PostMapping("/authenticate")
    public ResponseEntity<UserHelper.JWTToken> authorize(@Valid @RequestBody LoginDTO loginDto) {
       return userHelper.authorize(loginDto);
