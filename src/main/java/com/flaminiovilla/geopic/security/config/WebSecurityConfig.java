@@ -5,7 +5,9 @@ import com.flaminiovilla.geopic.security.jwt.JWTConfigurer;
 import com.flaminiovilla.geopic.security.jwt.TokenProvider;
 import com.flaminiovilla.geopic.security.exception.JwtAccessDeniedHandler;
 import com.flaminiovilla.geopic.security.exception.JwtAuthenticationEntryPoint;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.Ordered;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -16,7 +18,14 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
@@ -50,6 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) {
+
         web.ignoring()
                 .antMatchers(HttpMethod.OPTIONS, "/**")
 
@@ -64,11 +74,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 );
     }
 
+
+
     // Configure security settings ===========================================================================
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
+                .cors().and()
                 // we don't need CSRF because our token is invulnerable
                 .csrf().disable()
 

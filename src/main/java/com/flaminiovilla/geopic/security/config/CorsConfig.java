@@ -1,11 +1,15 @@
 package com.flaminiovilla.geopic.security.config;
 
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.core.Ordered;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Il Cross-Origin Resource Sharing (CORS) è un meccanismo che usa header HTTP addizionali
@@ -19,21 +23,11 @@ public class CorsConfig {
       UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
       CorsConfiguration config = new CorsConfiguration();
       config.setAllowCredentials(true);
-      config.addAllowedOrigin("https://geris.flaminiovilla.it"); // e.g. http://domain1.com
-      config.addAllowedHeader("http://flaminiovilla.it");
-      config.setAllowCredentials(true);
-      config.addAllowedOrigin("*");
-      config.addAllowedHeader("*");
-      config.addAllowedMethod("OPTIONS");
-      config.addAllowedMethod("HEAD");
-      config.addAllowedMethod("GET");
-      config.addAllowedMethod("PUT");
-      config.addAllowedMethod("POST");
-      config.addAllowedMethod("DELETE");
-      config.addAllowedMethod("PATCH");
+      config.setAllowedOrigins(Arrays.asList("http://localhost:5001", "*"));
+      config.setAllowedMethods(Collections.singletonList("*"));
+      config.setAllowedHeaders(Collections.singletonList("*"));
       source.registerCorsConfiguration("/**", config);
 
-      source.registerCorsConfiguration("/api/**", config);
       return new CorsFilter(source);
    }
 
