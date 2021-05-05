@@ -2,6 +2,7 @@ package com.flaminiovilla.geopic.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -20,6 +21,8 @@ public class CorsConfig {
       config.setAllowCredentials(true);
       config.addAllowedOrigin("https://geris.flaminiovilla.it"); // e.g. http://domain1.com
       config.addAllowedHeader("http://flaminiovilla.it");
+      config.addAllowedHeader("http://localhost:64916");
+      config.addAllowedHeader("*");
       config.addAllowedMethod("*");
       source.registerCorsConfiguration("/*/*/*", config);
 
