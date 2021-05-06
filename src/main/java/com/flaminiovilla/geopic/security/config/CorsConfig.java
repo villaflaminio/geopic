@@ -22,7 +22,7 @@ public class CorsConfig {
    public CorsFilter corsFilter() {
       UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
       CorsConfiguration config = new CorsConfiguration();
-      config.setAllowCredentials(true);
+      config.setAllowCredentials(false);
       config.addAllowedOrigin("*"); // e.g. http://domain1.com
       config.addAllowedMethod("*");
       config.addAllowedHeader("*");
@@ -35,7 +35,7 @@ public class CorsConfig {
    public FilterRegistrationBean<CorsFilter> simpleCorsFilter() {
       UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
       CorsConfiguration config = new CorsConfiguration();
-      config.setAllowCredentials(true);
+      config.setAllowCredentials(false);
       config.setAllowedOrigins(Arrays.asList("http://localhost:5001", "*"));
       config.setAllowedMethods(Collections.singletonList("*"));
       config.setAllowedHeaders(Collections.singletonList("*"));
