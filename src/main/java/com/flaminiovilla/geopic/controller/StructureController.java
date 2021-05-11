@@ -68,12 +68,15 @@ public class StructureController {
     }
 
     /**
-     * {
-     *     "location":"catanzaro"
+     * {{
+     *     "latitude":38.9027885,
+     *     "longitude":16.5944429,
+     *     "distance": 6
      * }
      * @return StructureDistanceDTO
      * @apiNote structureDTO havo to have latitude, longitude and distance values setted
      */
+    @Deprecated
     @PostMapping("/findCityLocation")
     List<StructureDistanceDTO> findCityLocation(@RequestBody StructureDTO structureDTO) {
         return structureService.findCityLocation(structureDTO);

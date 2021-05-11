@@ -51,8 +51,6 @@ public class ReferralPersonCRUDController {
         return referralPersonService.findById(referralPersonDTO);
     }
     /**
-     * Dati nome e colore creo un nuovo obj, se l'inserimento riesce
-     * restituisco il nuovo obj
      * {
      *     "id" : 4,
      *     "email": "prova59@tiscali.it",

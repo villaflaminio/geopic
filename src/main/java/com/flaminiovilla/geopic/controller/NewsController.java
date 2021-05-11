@@ -20,8 +20,8 @@ public class NewsController {
 
 
     /**
-     * restituisce tutte le news che contengono la stringa di ricerca nel titlo,
-     * se non trovo niente cerco nella descriprion
+     * restituisce tutte le news che contengono la stringa di ricerca nel titolo,
+     * se non trovo niente cerco {search} all'interno della description.
      * @return List<NewsDTO>
      * se null restituisce []
      */
