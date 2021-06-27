@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "email": "vifla01@gmail.com",
+    "name": "Flaminio",
+    "phone": "3775093443",
+    "surname": "Villa",
+    "region_id": 3,
+    "secretary_id": 1
+  },
+  {
+    "id": 2,
+    "email": "calinvasileandrei@gmail.com",
+    "name": "Andrei",
+    "phone": "3775093443",
+    "surname": "Calin",
+    "region_id": 7,
+    "secretary_id": 2
+  },
+  {
+    "id": 9,
+    "email": "prova@tiscali.it",
+    "name": "Fabrizio",
+    "phone": "3775093443",
+    "surname": "Villa",
+    "region_id": 3,
+    "secretary_id": 1
+  },
+  {
+    "id": 11,
+    "email": "prova33@tiscali.it",
+    "name": "Fabrizio",
+    "phone": "3775093443",
+    "surname": "Villa",
+    "region_id": 3,
+    "secretary_id": 1
+  }
+]

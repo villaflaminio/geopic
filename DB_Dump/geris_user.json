@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "activated": true,
+    "email": "vifla01@gmail.com",
+    "first_name": "flaminio",
+    "last_name": "villa",
+    "password": "$2a$10$kG4A3LOtI.4.3XVpqI70jeN2KHQwtQhrbrPsiKmkMiz5ENMq7TV4S",
+    "region_id": 99
+  },
+  {
+    "id": 5,
+    "activated": true,
+    "email": "viflauser@gmail.com",
+    "first_name": "flaminio",
+    "last_name": "villa",
+    "password": "$2a$10$yiidYoKcw1Y02JHTHlcHNOWBhSK8C/vLiCGSI4p0EKU66f.8tjShy",
+    "region_id": 99
+  },
+  {
+    "id": 6,
+    "activated": true,
+    "email": "viflaadmin@gmail.com",
+    "first_name": "flaminio",
+    "last_name": "villa",
+    "password": "$2a$10$BK9iAqrTD8ZQtxZX4VLTzOBTxV8c3lNIntHh8xpGIaSRC5HAUrZDi",
+    "region_id": 99
+  },
+  {
+    "id": 7,
+    "activated": true,
+    "email": "viflaadminsecretary@gmail.com",
+    "first_name": "flaminio",
+    "last_name": "villa",
+    "password": "$2a$10$smFTe0cBiwU4OddjU.iNsei7BlNbV5r9kkT4NzqEGeInlno1MfAIe",
+    "region_id": 3
+  },
+  {
+    "id": 8,
+    "activated": true,
+    "email": "viflasecretary@gmail.com",
+    "first_name": "flaminio",
+    "last_name": "villa",
+    "password": "$2a$10$oe4wVpBf7rKLllg19/luA.sVfnm6GtXYlm7Fyc0baJLFGomDZvhIy",
+    "region_id": 3
+  },
+  {
+    "id": 9,
+    "activated": true,
+    "email": "a@a.com",
+    "first_name": "flaminio",
+    "last_name": "villa",
+    "password": "$2a$10$oe4wVpBf7rKLllg19/luA.sVfnm6GtXYlm7Fyc0baJLFGomDZvhIy",
+    "region_id": 3
+  }
+]

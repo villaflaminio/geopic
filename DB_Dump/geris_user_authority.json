@@ -1,0 +1,58 @@
+[
+  {
+    "user_id": 1,
+    "authority_name": "ROLE_ADMIN"
+  },
+  {
+    "user_id": 1,
+    "authority_name": "ROLE_ADMIN_SECRETARY"
+  },
+  {
+    "user_id": 1,
+    "authority_name": "ROLE_SECRETARY"
+  },
+  {
+    "user_id": 1,
+    "authority_name": "ROLE_USER"
+  },
+  {
+    "user_id": 5,
+    "authority_name": "ROLE_USER"
+  },
+  {
+    "user_id": 6,
+    "authority_name": "ROLE_ADMIN"
+  },
+  {
+    "user_id": 6,
+    "authority_name": "ROLE_ADMIN_SECRETARY"
+  },
+  {
+    "user_id": 6,
+    "authority_name": "ROLE_SECRETARY"
+  },
+  {
+    "user_id": 6,
+    "authority_name": "ROLE_USER"
+  },
+  {
+    "user_id": 7,
+    "authority_name": "ROLE_ADMIN_SECRETARY"
+  },
+  {
+    "user_id": 7,
+    "authority_name": "ROLE_SECRETARY"
+  },
+  {
+    "user_id": 7,
+    "authority_name": "ROLE_USER"
+  },
+  {
+    "user_id": 8,
+    "authority_name": "ROLE_SECRETARY"
+  },
+  {
+    "user_id": 8,
+    "authority_name": "ROLE_USER"
+  }
+]
