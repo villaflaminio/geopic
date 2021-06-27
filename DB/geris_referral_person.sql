@@ -1,1 +1,0 @@
-INSERT INTO geris.referral_person (id, email, name, phone, surname, secretary_id) VALUES (1, 'vifa71@tiscali.it', 'fabrizio', '3775093443', 'villa', 1);

@@ -1,1 +1,0 @@
-INSERT INTO geris.secretary (id, address, mail, name, phone) VALUES (1, 'via G.Marafioti', 'caserma@carabinieri.cc', 'Comando cc', '3775093443');
