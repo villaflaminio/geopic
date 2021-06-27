@@ -5,4 +5,3 @@ docker stop geris_backend &&
 docker rm geris_backend &&
 docker build -t geris_backend . &&
 docker run -d --name geris_backend -p 1564:1564 geris_backend
-
