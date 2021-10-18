@@ -1,6 +1,9 @@
-##DOCUMENTAZIONE SOFTWARE
 
-##GEOPIC
+[![Build Status](https://travis-ci.org/codecentric/springboot-sample-app.svg?branch=master)](https://travis-ci.org/codecentric/springboot-sample-app)
+[![Coverage Status](https://coveralls.io/repos/github/codecentric/springboot-sample-app/badge.svg?branch=master)](https://coveralls.io/github/codecentric/springboot-sample-app?branch=master)
+
+DOCUMENTAZIONE SOFTWARE
+GEOPIC
 
 Flaminio Villa & Vasile Andrei Calin \| Politecnico di Milano
 
